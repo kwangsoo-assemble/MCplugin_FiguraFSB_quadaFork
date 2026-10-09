@@ -11,27 +11,25 @@ Spigot/Paper 플러그인. 공식 FSB 포크(Figura 1.20.6 브랜치)의 server-
   `spigot-*-unshaded.jar`는 중간 산출물 — 서버에 넣지 말 것
 - plugin.yml: name=FiguraFSB (데이터 폴더 `plugins/FiguraFSB/`), 명령 `/fsb`
 
-## ★ 공개판 · 내부판 (2026-09-25)
+## ★ GitHub 저장소 — 이 작업본을 그대로 올린다 (2026-10-10 — 🙋 규칙 변경)
 
-이 폴더는 **내부판**이다 — 작업은 여기서 한다(한글 주석 · 이 CLAUDE.md · 빌드 산출물). 로컬 git 만 있고 **원격이 없다.**
-공개판 `../figura_fsbplugin_but_ai_edited` (GitHub `kwangsoo-assemble/figura_fsbplugin_but_ai_edited`) 는 **같은 코드에 주석만 영어**인 사본이다
-(이 CLAUDE.md 는 없다 · 원본 README 는 `README.upstream.md` · 영어 README 는 하네스의 한글판을 옮긴 것).
+이 폴더가 GitHub `kwangsoo-assemble/MCplugin_FiguraFSB_quadaFork` 의 **작업본**이다 — 한글 주석 · 이 CLAUDE.md 까지 그대로 올라간다.
+옛 «공개판» 사본(`figura_fsbplugin_but_ai_edited` — 같은 코드에 주석만 영어)은 2026-10-10 에 없앴다 — 그 이력은 이 저장소에 합쳐 두었다.
 
-- 코드를 고쳤으면 **공개판에도 같은 변경을 옮긴다** — 주석은 영어로, 내부 이름(하네스 · 콘텐츠명 · 사람 인용)은 빼고 일반 표현으로.
-- 판정: `python ../../../mc_content_production/projects/mc_repositories/tools/repos.py status` — «주석을 빼면 같은가 · 공개판 한글 0 · 내부 문서 유출 0 · README 동기».
-- 올리기: `python ../../../mc_content_production/projects/mc_repositories/tools/repos.py publish fsbplugin -F <메시지 파일>` — 위가 초록일 때만 커밋 · 푸시한다
-  (공개판 커밋 · 푸시는 세션이 자동으로 한다 — 하네스 `CLAUDE.md` 「외부 저장소 — mc_repositories」).
-- README 는 **한글판이 원본**이다 — 하네스 `projects/mc_repositories/readme_ko/figura_fsbplugin_but_ai_edited.md`. 기능을 바꾸면 거기 먼저 적고
+- 매듭마다 로컬 커밋 → `python ../../../mc_content_production/projects/mc_repositories/tools/repos.py publish fsbplugin` 로 푸시한다
+  (세션이 자동으로 한다 · `--force` 금지 · 원격이 앞서 있거나 README 동기가 빨가면 멈춘다 — 하네스 `CLAUDE.md` 「외부 저장소 — mc_repositories」).
+- README.md 는 영어판이고 **원본은 하네스의 한글판**이다 — `projects/mc_repositories/readme_ko/MCplugin_FiguraFSB_quadaFork.md`. 기능을 바꾸면 거기 먼저 적고
   영어 README 에 옮긴 뒤 `repos.py mark-readme fsbplugin`.
-- 내부판 변경은 **로컬 커밋**으로 남긴다(원격 없음).
-- `API.md` 는 공개판에서 **영어로 번역한 본**이다 — 내용을 바꾸면 양쪽을 같이 고친다(대조 도구는 이 파일을 비교하지 않는다).
-- `server-common/` 을 고쳤으면 코어 내부판 · 코어 공개판으로 복사까지 해야 끝이다.
+- 레포 이름 규칙 — `MCmod_` / `MCplugin_` + 프로젝트 이름 (+ 포크는 `_quadaFork`). `but-ai-edited` 는 **버전명에만** 쓴다.
+- `LICENSE.md` — PolyForm Noncommercial 1.0.0 (원본 Figura 와 같다 · 옛 공개판에서 옮김).
+- `API.md` 는 한글이다 — 옛 공개판의 영어 번역본은 이 레포 이력(2026-10-10 이전 커밋)에 남아 있다.
+- `server-common/` 을 고쳤으면 코어 작업본(`../figura_core_internal`)으로 복사까지 해야 끝이다.
 
 ## 모듈
 
 - `server-common/` — MC 의존 0(brigadier+gson만)인 프로토콜/로직 본체.
   **이 프로젝트가 원본(source of truth)** — 수정 후 클라 프로젝트
-  `../figura_core_internal/server-common/src`로 통째 복사 동기화 필수 (공개판도 같다: `figura_fsbplugin_but_ai_edited` → `figura_core_but_ai_edited`) (불일치 = 와이어 파손)
+  `../figura_core_internal/server-common/src`로 통째 복사 동기화 필수 (불일치 = 와이어 파손)
 - `spigot/` — Bukkit 플러그인(플러그인 메시지 채널 `figura:*`), 공개 API는 `api/` 패키지
 
 ## 원본 대비 자체 변경 (프로토콜/기능)
