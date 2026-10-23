@@ -20,9 +20,9 @@ Spigot/Paper 플러그인. 공식 FSB 포크(Figura 1.20.6 브랜치)의 server-
   (세션이 자동으로 한다 · `--force` 금지 · 원격이 앞서 있거나 README 동기가 빨가면 멈춘다 — 하네스 `CLAUDE.md` 「외부 저장소 — mc_repositories」).
 - README.md 는 영어판이고 **원본은 하네스의 한글판**이다 — `projects/mc_repositories/readme_ko/MCplugin_FiguraFSB_quadaFork.md`. 기능을 바꾸면 거기 먼저 적고
   영어 README 에 옮긴 뒤 `repos.py mark-readme fsbplugin`.
-- 레포 이름 규칙 — `MCmod_` / `MCplugin_` + 프로젝트 이름 (+ 포크는 `_quadaFork`). `but-ai-edited` 는 **버전명에만** 쓴다.
+- 레포 이름 규칙 — `MCmod_` / `MCplugin_` + 프로젝트 이름 (+ 포크는 `_quadaFork`). 버전은 `기본버전.N` — 업스트림 버전 뒤 넷째 자리가 포크 판 번호다(2026-10-23 M41 · 그 전 꼬리 `-but-ai-edited.N`).
 - ★ **버전 · 릴리스** (🙋 2026-10-10 «기능 업데이트 할때마다 버전명 올리는 처리»): jar 에 들어가는 코드가 바뀌면 `gradle.properties` 의 `mod_version` 를 올린다 —
-  포크는 꼬리 `but-ai-edited.N` 의 **N+1**(원본 버전이 바뀌면 원본을 따르고 `.1` 부터). 그 작업의 **첫 코드 수정과 함께** 올리고(같은 작업의
+  포크는 `기본버전.N` 의 **N+1**(원본 버전이 바뀌면 원본을 따르고 `.1` 부터). 그 작업의 **첫 코드 수정과 함께** 올리고(같은 작업의
   시험 배포는 같은 버전) → 빌드 · 배포 · 🎬 → `repos.py release fsbplugin`(태그 + GitHub Release 에 jar). 문서만 바뀌면 안 올린다.
   안 올리면 `repos.py status` 가 `VERSION_STALE` · 올리고 안 내면 `UNRELEASED` 로 빨갛다.
 - `LICENSE.md` — PolyForm Noncommercial 1.0.0 (원본 Figura 와 같다 · 옛 공개판에서 옮김).
