@@ -22,6 +22,7 @@
 | Plugin | name `FiguraFSB`, version `0.1.6.2` (see 11), command `/fsb`, data folder `plugins/FiguraFSB/` |
 | Companion client | MCmod_Figura_quadaFork (shares `server-common/` as the same source) |
 | Companion plugin | [MCplugin_FiguraController](https://github.com/kwangsoo-assemble/MCplugin_FiguraController) — server-owned states and signals (built on this plugin's API; see below) |
+| Minecraft 26.3 | A separate test branch, [`26.3`](https://github.com/kwangsoo-assemble/MCplugin_FiguraFSB_quadaFork/tree/26.3) (see "26.3 branch" below) |
 
 ## Changes from upstream
 
@@ -154,6 +155,16 @@ plugin's public API.
 | `allowNonHostPackets` | `false` | Allow packets from avatars other than the host's (**added**) |
 | `autosaveIntervalSeconds` | `300` | Periodic save interval, `0` turns it off (**added**) |
 
+## 26.3 branch (test build)
+
+There is a separate test branch, [`26.3`](https://github.com/kwangsoo-assemble/MCplugin_FiguraFSB_quadaFork/tree/26.3), for Paper / Purpur **26.3**.
+`main` (1.21.8) is unchanged, and this README is kept identical on both branches.
+
+- The code is the same as on `main` — only the build setup was moved to 26.3 (Java 25 · Gradle 9.5.1 · `paper-api 26.3.build.214-stable` · `api-version: 1.21` unchanged).
+- Version `0.1.6.1+26.3` (jar `figura-fsb-0.1.6.1+26.3.jar`) · release `v0.1.6.1+26.3` — not marked as "Latest".
+- The companion client is the `26.3` branch of [MCmod_Figura_quadaFork](https://github.com/kwangsoo-assemble/MCmod_Figura_quadaFork).
+- Building — JDK 25 · `./gradlew build`.
+
 ## Building
 
 JDK 21 is required.
@@ -192,6 +203,7 @@ Output: `spigot/build/libs/figura-fsb-<version>.jar` (a jar with `server-common`
 | 플러그인 | 이름 `FiguraFSB` · 버전 `0.1.6.2` (아래 11) · 명령 `/fsb` · 데이터 폴더 `plugins/FiguraFSB/` |
 | 짝 클라이언트 | MCmod_Figura_quadaFork (`server-common/` 을 같은 소스로 공유한다) |
 | 함께 쓰는 플러그인 | [MCplugin_FiguraController](https://github.com/kwangsoo-assemble/MCplugin_FiguraController) — 서버가 주인인 상태 · 신호 (이 플러그인의 API 위에 얹혀 있다 · 아래) |
+| Minecraft 26.3 | 시험 가지 [`26.3`](https://github.com/kwangsoo-assemble/MCplugin_FiguraFSB_quadaFork/tree/26.3) 이 따로 있다 (아래 «26.3 가지») |
 
 ## 원본 대비 변경 사항
 
@@ -314,6 +326,16 @@ Output: `spigot/build/libs/figura-fsb-<version>.jar` (a jar with `server-common`
 | `avatarCountLimit` | `1` | 플레이어당 아바타 개수 |
 | `allowNonHostPackets` | `false` | 호스트가 아닌 아바타의 패킷 허용 (**추가**) |
 | `autosaveIntervalSeconds` | `300` | 주기 저장 간격, `0` 이면 끔 (**추가**) |
+
+## 26.3 가지 (시험판)
+
+Paper · Purpur **26.3** 용 시험 가지 [`26.3`](https://github.com/kwangsoo-assemble/MCplugin_FiguraFSB_quadaFork/tree/26.3) 이 따로 있다.
+main(1.21.8)은 그대로이고, 이 README 는 두 가지에 같은 글로 둔다.
+
+- 코드는 main 과 같다 — 빌드 설정만 26.3 으로 올렸다(Java 25 · Gradle 9.5.1 · `paper-api 26.3.build.214-stable` · `api-version: 1.21` 그대로).
+- 버전 `0.1.6.1+26.3` (jar `figura-fsb-0.1.6.1+26.3.jar`) · 릴리스 `v0.1.6.1+26.3` — «Latest» 로 표시하지 않는다.
+- 짝 클라이언트는 [MCmod_Figura_quadaFork](https://github.com/kwangsoo-assemble/MCmod_Figura_quadaFork) 의 `26.3` 가지다.
+- 빌드 — JDK 25 · `./gradlew build`.
 
 ## 빌드
 

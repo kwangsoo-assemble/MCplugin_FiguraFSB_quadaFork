@@ -70,3 +70,10 @@ libs/에 복사해 install-file 해야 함 (provided 의존).
 
 - **타 개발자/플러그인 연동 가이드**: `API.md` (핑·서버패킷 사용법, 리플레이 state/signal 설계 포함)
 - 서버 CH↔아바타 브리지 규약: mc_content_production 하네스 `knowledge/shared/fsb_bridge_system.md`
+
+## 26.3 가지 (시험 · 하네스 M43)
+
+- Paper · Purpur 26.3 용 시험 가지 `26.3` 은 **별도 작업 폴더** `../figura_fsbplugin_internal_26.3`(git worktree)에 있다 — 코드는 main 과 같고 빌드 설정만 26.3(JDK 25 · Gradle 9.5.1 · `paper-api 26.3.build.214-stable`)
+- `server-common/` 을 고치면 두 가지와 코어 두 가지(`../figura_core_internal` · `../figura_core_internal_26.3`)에 같게 — 다르면 통신이 깨진다
+- 배포 `projects/mc_repositories/tools/deploy_263.py`(시험 서버) · 푸시 `repos.py publish fsbplugin_263` · 릴리스 `repos.py release fsbplugin_263`(«Latest» 아님)
+- README 는 main 과 **같은 바이트**로 둔다 — main 에서 README 를 고치면 이 가지에도 복사한다
